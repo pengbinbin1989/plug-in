@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>广告</title>
+	<meta name="Author" content="475731530@qq.com">
+	<meta name="keywords" content="广告,轮播">
+	<meta name="Description" content="HTML5+Css3+Javascript,IE10+,移动端广告">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+
+	<!-- Format Css -->
+	<style type="text/css">
+		body,ul,ol,li{padding: 0;margin: 0;}
+		img {border: 0;}
+		ol,ul {list-style: none;}
+	</style>
+	<!-- Ads Css -->
+	<style type="text/css">
+		#ad_content{
+			position:relative;
+			width:100%;
+			/*height:672px;*/
+			overflow:hidden;
+		}
+			#ad_ul{
+				display:block;
+				position:relative;
+				height:100%;
+				font-size:0px;
+				margin-left:0px;
+						transition: margin-left 0.6s;
+				   -moz-transition: margin-left 0.6s;
+				-webkit-transition: margin-left 0.6s;
+					 -o-transition: margin-left 0.6s;
+			}
+			#ad_ul.adNum1{width: 100%}
+			#ad_ul.adNum2{width: 200%}
+			#ad_ul.adNum3{width: 300%}
+			#ad_ul.adNum4{width: 400%}
+			#ad_ul.adNum5{width: 500%}
+			#ad_ul.adNum6{width: 600%}
+			#ad_ul.adNum7{width: 700%}
+			#ad_ul.adNum8{width: 800%}
+			#ad_ul.adNum9{width: 900%}
+			#ad_ul.adNum10{width: 1000%}
+
+			.ad_0 #ad_ul{margin-left: 0%}
+			.ad_1 #ad_ul{margin-left: -100%}
+			.ad_2 #ad_ul{margin-left: -200%}
+			.ad_3 #ad_ul{margin-left: -300%}
+			.ad_4 #ad_ul{margin-left: -400%}
+			.ad_5 #ad_ul{margin-left: -500%}
+			.ad_6 #ad_ul{margin-left: -600%}
+			.ad_7 #ad_ul{margin-left: -700%}
+			.ad_8 #ad_ul{margin-left: -800%}
+			.ad_9 #ad_ul{margin-left: -900%}
+			.ad_10 #ad_ul{margin-left: -1000%}
+				.ad_li{
+					display:inline-block;
+					position:relative;
+					height:100%;
+					overflow: hidden;
+				}
+				#ad_ul.adNum1 .ad_li{width: 100%;}
+				#ad_ul.adNum2 .ad_li{width: 50%;}
+				#ad_ul.adNum3 .ad_li{width: 33.3333333333%;}
+				#ad_ul.adNum4 .ad_li{width: 25%;}
+				#ad_ul.adNum5 .ad_li{width: 20%;}
+				#ad_ul.adNum6 .ad_li{width: 16.6666666667%;}
+				#ad_ul.adNum7 .ad_li{width: 14.2857142857%;}
+				#ad_ul.adNum8 .ad_li{width: 12.5%;}
+				#ad_ul.adNum9 .ad_li{width: 11.1111111111%;}
+				#ad_ul.adNum10 .ad_li{width: 10%;}
+					.ad_img{display: block;width: 100%;position: relative;}
+			/**/
+			.ad_ol{
+				display:block;
+				position:absolute;
+				width: 100%;height: 0px;
+				bottom: 22px;
+				font-size:0px;
+				text-align:center;
+			}
+				.ad_point{
+					display:inline-block;
+					position:relative;
+					margin:0 5px;
+					width:12px;
+					height:12px;
+					border-radius:10px;
+					background-color:rgba(180,180,180,0.8);
+				}
+
+				.ad_0 .ad_point_00,
+				.ad_1 .ad_point_01,
+				.ad_2 .ad_point_02,
+				.ad_3 .ad_point_03,
+				.ad_4 .ad_point_04,
+				.ad_5 .ad_point_05,
+				.ad_6 .ad_point_06,
+				.ad_7 .ad_point_07,
+				.ad_8 .ad_point_08,
+				.ad_9 .ad_point_09,
+				.ad_10 .ad_point_10{
+					background-color: #fff;
+				}
+	</style>
+</head>
+<body>
+	<article id="ad_content" class="ad_0">
+		<ul id="ad_ul" class="adNum3">
+			<li class="ad_li ad_li_00"><img class="ad_img" src="" title=""></li>
+			<li class="ad_li ad_li_01"><img class="ad_img" src="" title=""></li>
+			<li class="ad_li ad_li_02"><img class="ad_img" src="" title=""></li>
+		</ul>
+		<ol class="ad_ol">
+			<li class="ad_point ad_point_00"></li>
+			<li class="ad_point ad_point_01"></li>
+			<li class="ad_point ad_point_02"></li>
+		</ol>
+	</article>
+	<script type="text/javascript">
+		(function(obj_AD){
+			var 
+			target = document.getElementById(obj_AD.target),
+			ul = target.getElementsByTagName("ul")[0],
+			ol = target.getElementsByTagName("ol")[0],
+			numAD = ul.className.substring(5)*1,
+			 num = 0;
+			function change(){
+				if (num >= numAD -1) {num = -1};
+				num+=1;
+				target.className = "ad_"+num;
+				if (num >= numAD -1) {num = -1};
+			}
+			var Interval = setInterval(function(){change();},obj_AD.speed);
+
+			/*鼠标事件*/
+				(function(){
+					/*鼠标悬停 广告停止滚动*/
+					target.addEventListener("mouseover",function(){
+						Interval = clearInterval(Interval);
+					},false);
+					/*鼠标移出 广告继续滚动*/
+					target.addEventListener("mouseout",function(){
+						Interval = setInterval(function(){change();},obj_AD.speed);
+					},false);
+					/*鼠标点击定位*/
+					ol.addEventListener("click",function(e){
+						if (e.target && e.target.nodeName === "LI") {
+							num = e.target.className.substring(18)*1;
+							target.className = "ad_"+num;
+						};
+					},false);
+				})();
+				
+			/*触摸事件*/
+				(function(){
+					var sx, ex, dx, positionX;
+					ul.addEventListener("touchstart",function(e){
+						Interval = clearInterval(Interval);
+						var touch = e.touches[0];
+						sx = touch.pageX; dx = 0;
+					},false);
+					ul.addEventListener("touchmove",function(e){
+						var touch = e.touches[0];
+						ex = touch.pageX;
+						dx = ex - sx;
+						if (dx > 6 || dx < -6) { e.preventDefault(); };
+					},false);
+					ul.addEventListener("touchend",function(e){
+						if (dx <= 6) {
+							if (num >= numAD -1) {num = -1};
+							num+=1;
+							target.className = "ad_"+num;
+							if (num >= numAD -1) {num = -1};
+						}else if(dx >= 6) {
+							if (num <= 0) {num = numAD};
+							num-=1;
+							target.className = "ad_"+num;
+						};
+						Interval = setInterval(function(){
+							change();
+						},obj_AD.speed);
+					},false)
+				})();
+		})({
+			target:"ad_content",
+			speed:3000
+		})
+	</script>
+</body>
+</html>
